@@ -1,3 +1,41 @@
 `
+USE mydb_hw;
 
+-- Task 07.1
+SELECT 
+    id,
+    YEAR(date) AS year,
+    MONTH(date) AS month,
+    DAY(date) AS day,
+    date
+FROM
+    orders;
+    
+-- Task 07.2
+SELECT 
+    id, date, DATE_ADD((date), INTERVAL 1 DAY) AS new_date
+FROM
+    orders;
+    
+-- Task 07.3
+SELECT 
+    id, date, ROUND(UNIX_TIMESTAMP(date), 0) AS timestamp
+FROM
+    orders;
+    
+-- Task 07.4
+SELECT 
+    COUNT(*) AS rows_count
+FROM
+    orders
+WHERE
+    date BETWEEN '1996-07-10 00:00:00' AND '1996-10-08 00:00:00';
+
+-- Task 07.5
+SELECT
+  id, date, JSON_OBJECT(
+    'id', id,
+    'date', date
+  ) AS json_object
+FROM orders;
  `
