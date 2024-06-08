@@ -1,23 +1,23 @@
-# goit-rdb-hw-05 Relationship Databases Topic V Nested requests. Code reuse
+# goit-rdb-hw-07 Relationship Databases Topic VII: Additional built-in SQL functions. Time param
 
--- Task 1. SQL query that displays the `order_details` table and the `customer_id` field from the `orders` table, respectively, for each record field from the `order_details` table
+-- Task 1. SQL query that extracts the year, month, and date from the date attribute for the orders table. Display them in three separate attributes along with the id attribute and the original date attribute (there will be 5 attributes in total)
 
-![screenshot](./assets/Screenshot%20rdb-hw-05-test-5.1.jpg)
+![screenshot](./assets)
 
--- Task 2. SQL query that displays the `order_details` table. The results are filtered so that the corresponding record from the `orders` table fulfils the condition `shipper_id=3`. A nested query in the `WHERE` clause used
+-- Task 2. SQL query that adds one day to the date attribute for the orders table. Display the id attribute, the original date attribute, and the addition result on the screen
 
-![screenshot](./assets/Screenshot%20rdb-hw-05-test-5.2.jpg)
+![screenshot](./assets)
 
--- Task 3. SQL query nested in the `FROM' statement, which selects rows with the `quantity>10' condition from the `order_details` table.
+-- Task 3. SQL query that displays the number of seconds since the start of the countdown for the orders table for the date attribute (shows its timestamp value). To do this, you need to find and apply the necessary function. Display the id attribute, the original date attribute and the result of the function on the screen
 
-![screenshot](./assets/Screenshot%20rdb-hw-05-test-5.3.jpg)
+![screenshot](./assets)
 
--- Task 4: Solution for task 3 using the `WITH` statement to create the temporary table `temp`
+-- Task 4: SQL query that counts how many rows in the orders table contain a date attribute between 1996-07-10 00:00:00 and 1996-10-08 00:00:00
 
-![screenshot](./assets/Screenshot%20rdb-hw-05-test-5.4.jpg)
+![screenshot](./assets)
 
--- Task 5: This function has two parameters that divide the first parameter by the second. Both the parameters and the return value are of `FLOAT` type. The `DROP FUNCTION IF EXISTS` construct applied to the `quantity` attribute of the `order_details` table
+-- Task 5: SQL query that displays the id attribute, the date attribute, and the JSON object {"id": <string id attribute>, "date": <string date attribute>} for the orders table. Use the function to create a JSON object
 
-![screenshot](./assets/Screenshot%20rdb-hw-05-test-5.5.jpg)
+![screenshot](./assets)
 
 [text](sql_code.txt)
